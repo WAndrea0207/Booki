@@ -95,19 +95,25 @@ header {
   height: 49px;
   flex: 1;
   min-width: 0;              /* largeur visuelle proche de ta maquette */
-  padding: 0 16px;
+  padding: 0 24px;
   border: 1px solid #DDD;
   border-left: 0;                /* fusion avec la cellule icône */
   border-right: 0;               /* fusion avec le bouton */
-  font-size: 16px;
+  font-size: 18px;
   outline: none;
+  font-weight: bold;
 }
+.search-input::placeholder {
+  color: black !important;
+
+}
+
 .search-input:focus { border-color: #0065FC; }
 
 /* Bouton bleu à droite */
 .search-btn {
   height: 49px;
-  padding: 0 24px;
+  padding: 0 15px;
   background: #0065FC;
   color: #fff;
   border: 0;
