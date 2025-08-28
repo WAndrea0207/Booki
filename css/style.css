@@ -2,84 +2,87 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
+
+body {
+ margin: 0;
+}
 header {
-  padding: 10px 10px;
+  
   background-color: white;
 }
 
 /* Navbar = Logo à gauche + Navigation à droite */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 15px;
+    max-width: 1440px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
 }
 
 /* Logo */
 .logo img {
-  max-width: 80px;
-  height: auto;
+  max-width: 61.09px;
+  height: 19px;
 }
 
-/* Navigation */
 .nav-tabs {
-  list-style: none;
   display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+  gap: 30px; /* espace entre Hébergements et Activités */
+  list-style: none;
+
 }
 
 .nav-tabs li a {
   text-decoration: none;
-  font-weight: 500;          
-  font-size: 14px;           
+  font-weight: 500;
+  font-size: 14px;
   color: #555;
-  padding: 20px 14px 10px 14px;  
-  position: relative;
-  transition: color 0.3s ease;
+  padding: 20px 14px 10px 14px;
+  border-top: 2px solid transparent; /* ligne cachée par défaut */
+
 }
+
 .nav-tabs li a:hover,
 .nav-tabs li a.active {
   color: #0065fc;
-}
-
-.nav-tabs li a:hover::before,
-.nav-tabs li a.active::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #0065fc;
+  border-top-color: #0065fc; /* ligne bleue hover ou actif */
 }
 
 /* ===============================
    TEXTE SOUS LE LOGO
    =============================== */
 /* Titres sous le logo */
-.header-text { margin-top: 28px; }
-.header-text h1 { margin: 0; font-size: 20px; line-height: 1.2; }
-.header-text p { margin: 8px 0 0; color: #666; }
+.header-text { margin-top: 30px; }
+.header-text h1 { margin: 0; font-size: 22px; line-height: 1.2; }
+.header-text p { margin: 8px 0 0;font-size: 16px; color: #000000; }
 
 /* ===============================
    BARRE DE RECHERCHE
    =============================== */
-.search-bar {
-  display: inline-flex;
-  align-items: stretch;
-  margin-top: 20px;
-  max-width: 420px;   /* largeur max réduite */
-  width: 100%;
+
+.search-container {
+  display: flex;
+  flex-direction: column; /* aligne verticalement */
 }
+
+.search-bar {
+    display: inline-flex;
+    align-items: stretch;
+    margin-top: 20px;
+    width: 377px;
+    height: 49px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
 
 /* Cellule icône à gauche */
 .search-icon {
   display: grid;
   place-items: center;
   width: 52px;
-  height: 52px;
+  height: 49px;
   background: #F2F2F2;
   border: 1px solid #DDD;
   border-right: 0;               /* fusion propre avec l'input */
@@ -89,7 +92,7 @@ header {
 
 /* Champ de saisie */
 .search-input {
-  height: 52px;
+  height: 49px;
   flex: 1;
   min-width: 0;              /* largeur visuelle proche de ta maquette */
   padding: 0 16px;
@@ -103,12 +106,13 @@ header {
 
 /* Bouton bleu à droite */
 .search-btn {
-  height: 52px;
+  height: 49px;
   padding: 0 24px;
   background: #0065FC;
   color: #fff;
   border: 0;
   font-weight: 700;
+  font-size: 18px;
   border-radius: 0 12px 12px 0;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,101,252,.35);
@@ -138,6 +142,87 @@ header {
 .search-btn:hover { background: #004BBD; }
 
 
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.filters h2 {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #d9d9d9;
+  background: white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-buttons button:hover {
+  background-color: #c0d9fc;
+}
+
+/* LOGO "i" */
+.results-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* pastille "i" */
+.info-badge {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;   
+  background: #fff;             
+}
+
+.info-badge .fa-solid {
+  font-size: 12px;
+  /* la couleur reste --main-color via .fa-solid global */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,6 +240,8 @@ header {
 body {
     display: flex;
     justify-content: center;
+    
+    
 }
 
 .main-container {
