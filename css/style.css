@@ -148,11 +148,12 @@ header {
 .search-btn:hover { background: #004BBD; }
 
 
-.filters {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+.filters { 
+    width: 758px; 
+    display: flex ; 
+    align-items: center; 
+    gap: 15px; 
+    height: 50px; }
 
 .filters h2 {
   font-size: 14px;
@@ -161,20 +162,25 @@ header {
 
 .filter-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1;
+
   gap: 15px;
 }
 
 .filter-buttons button {
   display: flex;
+  white-space: nowrap;     
+  flex: 1;
   align-items: center;
-  gap: 8px;
+  justify-content: center;  
+  height: 50px;
+  gap: 10px;
   border: 2px solid #d9d9d9;
   background: white;
   border-radius: 25px;
-  padding: 8px 16px;
+  padding: 4px 19px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -209,22 +215,6 @@ header {
   font-size: 12px;
   /* la couleur reste --main-color via .fa-solid global */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -291,10 +281,60 @@ a {
 }
 
 
+
+/****** Hebergements Marseille ***********/
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hebergements-cards .card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+}
+
+.hebergements-cards .card-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.hebergements-cards .card-title {
+    margin: 10px 0 5px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.hebergements-cards .card-rating {
+    margin-top: auto;
+}
+
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+     align-items: flex-start;
 }
 
 .hebergements-and-populaires section {
@@ -308,6 +348,7 @@ a {
 .hebergements {
     width: 65%;
 }
+
 
 /****** Populaires ***********/
 .populaires {
