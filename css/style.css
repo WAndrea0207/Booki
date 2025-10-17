@@ -704,14 +704,33 @@ a {
 
     .hebergements-and-populaires section {
         border-radius: 0;
-        padding: 30px 20px 20px 20px;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
         gap: 15px;
     }
 
+    /* Padding bottom spécifique pour Populaires - spécificité augmentée */
+    .hebergements-and-populaires .populaires {
+        padding-bottom: 30px;
+    }
+
     .section-title {
-        margin: 0 0 15px 0;
+        margin: 0;
         font-size: 22px;
     }
+
+    /* Margin spécifique pour le titre Hébergements à Marseille */
+    .hebergements .section-title {
+        margin-bottom: 15px;
+    }
+
+    /* Margin pour le titre + icône des Populaires */
+    .populaires-title {
+        margin-bottom: 15px;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 0;
