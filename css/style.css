@@ -551,40 +551,58 @@ a {
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 20px; 
     }
 
     .populaires-cards a {
         width: 30%;
+        flex: 1;
+    }
+
+    .populaires-cards .card {
+    display: flex;
+    margin-top: 20px;
+    }   
+
+    .populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
     }
 
     .activity-card {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        /* Laisse la hauteur s'adapter au contenu */
-        overflow: visible;
-        /* Enlève tout débordement caché */
-        width: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Laisse la hauteur s'adapter au contenu */
+    overflow: visible;
+    /* Enlève tout débordement caché */
+    width: auto;
     }
 
     .activity-card h3 {
-        flex-grow: 1;
-        /* Prend tout l'espace vertical disponible */
-        display: flex;
-        align-items: center;
-        text-align: left;
-        height: 70px;
-        line-height: 100%;
+    flex-grow: 1;
+    /* Prend tout l'espace vertical disponible */
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: 70px;
+    line-height: 100%;
     }
 
+    .populaires-cards .card-subtitle {
+    font-size: 14px; /* Change la taille du sous-titre à 14px */
+}
+
     .activity-card img {
-        height: 200px;
-        width: 100%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        display: block;
-        /* Élimine l'espace sous l'image */
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: block;
     }
 }
 
